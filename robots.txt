@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
+Disallow: /obzharka-coffee/404.html
 
-Sitemap: https://obzharka.example/sitemap.xml
+Sitemap: https://p4yla.github.io/obzharka-coffee/sitemap.xml
