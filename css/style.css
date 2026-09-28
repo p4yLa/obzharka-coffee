@@ -699,7 +699,7 @@ textarea.input { min-height: 96px; resize: vertical; }
   border-radius: 0 var(--r-sm) var(--r-sm) 0; margin-bottom: var(--sp-5); font-size: var(--fs-sm);
 }
 .notfound { min-height: 70svh; display: grid; place-items: center; text-align: center; padding: var(--sp-7) var(--gutter); }
-.notfound__code { font-family: var(--font-head); font-weight: 700; font-size: clamp(5rem, 20vw, 9rem); line-height: 1; color: var(--c-leaf); }
+.notfound .notfound__code { font-family: var(--font-head); font-weight: 700; font-size: clamp(5rem, 20vw, 9rem); line-height: 1; color: var(--c-leaf); }
 .notfound h1 { font-size: var(--fs-xl); margin: var(--sp-3) 0; }
 .notfound p { color: var(--c-espresso-soft); max-width: 30rem; margin: 0 auto var(--sp-5); }
 
