@@ -1,0 +1,37 @@
+# Настройки для хостинга Netlify
+[build]
+  publish = "."
+
+# Неизвестные адреса ведут на нашу страницу 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Заголовки безопасности для всех страниц
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Шрифты и картинки почти не меняются — кэшируем на год
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+# CSS и JS — на неделю (при правках меняйте имя файла или добавляйте ?v=2)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
